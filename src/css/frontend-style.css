@@ -17,7 +17,7 @@
 }
 
 #ctf_form fieldset {
-    background: white;
+    background: #141414;
     border: 0 none;
     border-radius: 0.5rem;
     box-sizing: border-box;
@@ -36,7 +36,8 @@
 }
 
 .form-card .steps {
-    font-size: 28px !important;
+    font-size: 20px !important;
+    color: #FFFFFFBF;
 }
 
 #ctf_form fieldset:not(:first-of-type) {
@@ -46,15 +47,15 @@
 #ctf_form input,
 #ctf_form textarea {
     padding: 8px 15px 8px 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #D9AB58;
     border-radius: 0px;
     margin-bottom: 20px;
     margin-top: 2px;
     width: 100%;
     box-sizing: border-box;
     font-family: montserrat;
-    color: #2C3E50;
-    background-color: #ECEFF1;
+    color: #fff;
+    background-color: transparent;
     font-size: 16px;
     letter-spacing: 1px
 }
@@ -65,7 +66,7 @@
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
-    border: 1px solid #000;
+    border: 1px solid #D9AB58;
     outline-width: 0
 }
 
@@ -116,7 +117,8 @@
 .card {
     z-index: 0;
     border: none;
-    position: relative
+    position: relative;
+    background: transparent !important;
 }
 
 
@@ -130,6 +132,7 @@
 
 #ctf_form .fs-title {
     font-size: 24px;
+    color: #FFFFFFBF;
 }
 
 .purple-text {
@@ -159,7 +162,7 @@
 }
 
 #progressbar .active {
-    color: #000;
+    color: #DAAC58;
 }
 
 #progressbar li {
@@ -238,10 +241,11 @@
 }
 
 #typewriter {
-    background: #F7F7F7;
+    background: #141414;
     padding: 20px;
     border-radius: 8px;
     height: 100%;
+    border: 1px solid #DAAC58;
 }
 
 #typewriter .typewriterInner:not(:last-child) {
@@ -251,7 +255,7 @@
 #typewriter .dummyImg {
     max-width: 100%;
     font-size: 3vw;
-    color: #000;
+    color: #fff;
 }
 
 #typewriter .word {
@@ -265,24 +269,24 @@
 }
 
 #ctf_form {
-    background: #fff;
+    background: #141414;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 4px 4px 48px rgba(28, 51, 64, .1);
+    border: 1px solid #D9AB58;
 }
 
 #ctf_form input {
-    background: #fff;
+    background: transparent;
     padding: 25px 15px;
     border-radius: 5px;
-    color: #000;
+    color: #fff;
     font-size: 16px;
     font-family: 'Lato';
     height: 52px;
 }
 
 #ctf_form input:focus {
-    border: 1px solid #000 !important;
+    border: 1px solid #D9AB58 !important;
 }
 
 #addNewFrase {
@@ -414,8 +418,8 @@
 }
 
 #ctf_form textarea {
-    background: #fff;
-    border: 1px solid #CCCCCC !important;
+    background: transparent;
+    border: 1px solid #D9AB58 !important;
     border-radius: 8px;
     height: 120px;
     font-family: 'Lato', 'sans-serif';
@@ -432,6 +436,7 @@
 .standardShipping h4,
 .standardShipping p {
     margin-bottom: 10px;
+    color: #FFFFFFBF;
 }
 
 #ctf_form .twiceField {
@@ -443,11 +448,11 @@
     display: flex;
     align-items: center;
     width: 100% !important;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .termCondition input {
-    max-width: 20px;
+    max-width: 16px;
     height: 20px;
     margin: 0 10px 0 0 !important;
 }
@@ -460,18 +465,27 @@
 }
 
 .termCondition label a {
-    color: #FF0000;
+    color: #D9AB58;
 }
 
-#ctf_form #counter {
-    color: #000;
+#ctf_form #counter,
+#ctf_form .priceCounter {
+    color: #fff;
+    font-size: 30px !important;
 }
 
 #ctf_form #letras,
 #ctf_form #chocoBase {
     margin-top: 15px !important;
     width: 100%;
-    background-color: #fff;
+    background-color: transparent;
+    border: 1px solid #D9AB58;
+    color: #fff;
+}
+
+#ctf_form #letras option,
+#ctf_form #chocoBase option{
+    color:#000;
 }
 
 .swithcerBtnGroup {
@@ -561,7 +575,7 @@
 .ordersPanel .orderDetails .orderData p {
     font-size: 14px;
     margin: 0 0 6px 0;
-    color: #616161;
+    color: #FFFFFFBF;
     line-height: 1;
 }
 
@@ -603,6 +617,7 @@
 .paymentPanel .paymentCard .paymentData {
     font-size: 14px;
     margin-top: 10px;
+    color: #FFFFFFBF;
 }
 
 .paymentPanel .paymentCard .paymentIcon {
@@ -643,7 +658,7 @@
     content: "";
     width: 100%;
     height: 1px;
-    background: #1E293B;
+    background: #fff;
     top: 5px;
     bottom: 0;
     left: 0;
@@ -652,22 +667,24 @@
 }
 
 .lineBreaker span {
-    background: #fff;
+    background: #141414;
     position: relative;
     display: inline-block;
     line-height: 1.5;
     padding: 5px;
     font-weight: 600;
+    color: #fff;
 }
 
 .couponSection {
-    border: 1px solid #CCCCCC;
+    border: 1px solid #D9AB58;
     padding: 15px;
     border-radius: 8px;
     height: 55px;
     overflow: hidden;
     margin-bottom: 50px;
     transition: all .3s linear;
+    color: #FFFFFFBF !important;
 }
 
 .couponSection.open {
@@ -685,7 +702,7 @@
     content: "";
     width: 12px;
     height: 12px;
-    border: 2px solid #212529;
+    border: 2px solid #D9AB58;
     border-top: none;
     border-right: none;
     right: 5px;
@@ -709,11 +726,12 @@
 }
 
 .couponSectionInner button {
-    background: #000;
+    background: #D9AB58;
     border-radius: 8px;
     margin-left: 10px;
     height: 52px;
     line-height: 0.4;
+    color: #000;
 }
 
 .thankYouCard h3,
@@ -772,14 +790,14 @@
 }
 
 .typed-text {
-    color: #E64C3C;
+    color: #DAAC58;
 }
 
 .cursor {
     display: inline-block;
     width: 3px;
     margin-left: 4px;
-    background: #E64C3C;
+    background: #DAAC58;
 }
 
 .cursor.blink {
@@ -790,7 +808,7 @@
 
     0%,
     100% {
-        background: #E64C3C;
+        background: #DAAC58;
     }
 
     40%,
@@ -840,7 +858,7 @@
 #mainWrapperForm #pricingTableBtn {
     writing-mode: vertical-lr;
     z-index: 1;
-    background: #fff;
+    background: #D9AB58;
     color: #000;
     padding: 2px;
     height: 100%;

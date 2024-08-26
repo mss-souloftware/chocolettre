@@ -161,7 +161,7 @@ function chocoletras_shortCode()
                         <?php if (!empty($result)) { ?>
                                 <img class="dummyImg" src="<?php echo site_url() . $result['featured']; ?>" alt="">
                             <?php } else { ?>
-                            <p class="dummyImg">Crea <span class="typed-text"></span><span class="cursor blink">&nbsp;</span>
+                            <p class="dummyImg">Create Your <span class="typed-text"></span><span class="cursor blink">&nbsp;</span>
                             </p>
                         <?php } 
                     } ?>
@@ -178,13 +178,13 @@ function chocoletras_shortCode()
                         <div id="pricingTable">
                             <div class="pricingTableData">
                                 <ul>
-                                    <li>Prec. por letras:  <b><?php echo get_option('precLetra'); ?>€</b></li>
-                                    <li>Prec. por ♥/✯:    <b><?php echo get_option('precCoraz'); ?>€</b></li>
+                                    <li>Prec. por letras:  <b><?php echo get_option('precLetra'); ?>PKR</b></li>
+                                    <li>Prec. por ♥/✯:    <b><?php echo get_option('precCoraz'); ?>PKR</b></li>
                                     <li>Caracteres Maximo:    <b><?php echo get_option('maxCaracteres'); ?></b></li>
-                                    <li>Gasto Minimo:    <b><?php echo get_option('gastoMinimo'); ?>€</b></li>
-                                    <li>Sábado Gastos de envío:    <b><?php echo get_option('saturdayShiping'); ?>€</b></li>
-                                    <li>Gastos de envío normales:    <b><?php echo get_option('precEnvio'); ?>€</b></li>
-                                    <li>Gastos de envío exprés:    <b><?php echo get_option('expressShiping'); ?>€</b></li>
+                                    <li>Gasto Minimo:    <b><?php echo get_option('gastoMinimo'); ?>PKR</b></li>
+                                    <li>Sábado Gastos de envío:    <b><?php echo get_option('saturdayShiping'); ?>PKR</b></li>
+                                    <li>Gastos de envío normales:    <b><?php echo get_option('precEnvio'); ?>PKR</b></li>
+                                    <li>Gastos de envío exprés:    <b><?php echo get_option('expressShiping'); ?>PKR</b></li>
                                 </ul>
                             </div>
                             <div id="pricingTableBtn"> Detalles De Precios</div>
@@ -198,24 +198,24 @@ function chocoletras_shortCode()
                                     echo ' class="active"';
                                 }
                                 ?> id="account">
-                                    <strong>Frase</strong></li>
+                                    <strong>Phrase</strong></li>
                                 <li <?php
                                 if (isset($_COOKIE['chocol_cookie']) || $_GET['abandoned']) {
                                     echo ' class="active"';
                                 }
                                 ?>
-                                    id="personal"><strong>Envío</strong></li>
+                                    id="personal"><strong>Shipping</strong></li>
                                 <li <?php
                                 if (isset($_COOKIE['chocol_cookie']) || $_GET['abandoned']) {
                                     echo ' class="active"';
                                 }
                                 ?> id="payment">
-                                    <strong>Pagos</strong></li>
+                                    <strong>Payments</strong></li>
                                 <li <?php
                                 if (isset($_GET['payment']) && $_GET['payment'] == true) {
                                     echo ' class="active"';
                                 }
-                                ?> id="confirm"><strong>Finalizar</strong></li>
+                                ?> id="confirm"><strong>Complete</strong></li>
                             </ul>
                             <fieldset <?php
                             if (isset($_COOKIE['chocol_cookie']) || $_GET['abandoned']) {
@@ -225,7 +225,7 @@ function chocoletras_shortCode()
                                 <div class="form-card">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="fs-title">Chocolettre</h2>
+                                            <h2 class="fs-title">Create Your Message</h2>
                                         </div>
                                         <div class="col-5">
                                             <h2 class="steps">
@@ -233,35 +233,35 @@ function chocoletras_shortCode()
                                                 <b id="<?php echo _e('counter') ?>">
                                                     <?php echo get_option('gastoMinimo') + get_option('precEnvio'); ?>
                                                 </b>
-                                                €
+                                                PKR
                                             </h2>
                                         </div>
                                     </div>
                                     <div class="fraseWrapper">
                                         <div class="frasePanel">
                                             <input id="<?php echo _e('getText') ?>" type="text"
-                                                placeholder="<?php echo _e('Escriba su frase aqu&iacute;..'); ?>"
+                                                placeholder="<?php echo _e('Write your phrase here!'); ?>"
                                                 maxlength="<?php echo get_option('maxCaracteres'); ?>" required>
                                         </div>
                                     </div>
                                     <button type="button" id="addNewFrase" disabled>
-                                        <img src="<?php echo plugins_url('../img/add-icon.png', __FILE__); ?>"> Nueva frase
+                                        <img src="<?php echo plugins_url('../img/add-icon.png', __FILE__); ?>"> Add New Phrase 
                                     </button>
 
-                                    <label class="fieldlabels">Tipo de espacio</label>
+                                    <label class="fieldlabels">Type of Space</label>
                                     <select id="letras" class="" name="attribute_letras">
-                                        <option selected value="heart" class="attached enabled">Corazón</option>
-                                        <option value="star" class="attached enabled">Estrella</option>
+                                        <option selected value="heart" class="attached enabled">Heart</option>
+                                        <option value="star" class="attached enabled">Star</option>
                                     </select>
                                     
-                                        <label class="fieldlabels">Tipo de chocolate</label>
+                                        <label class="fieldlabels">Type of Chocolate</label>
                                         <select id="chocoBase">
-                                            <option selected value="Claro" class="attached enabled">Chocolate con Leche</option>
-                                            <option value="Negro" class="attached enabled">Chocolate Negro</option>
+                                            <option selected value="Claro" class="attached enabled">Milk chocolate</option>
+                                            <option value="Negro" class="attached enabled">Dark chocolate</option>
                                         </select>
                                     
                                 </div> <button id="<?php echo _e('continuarBTN') ?>" type="button" name="next"
-                                    class="next action-button" disabled>Continuar</button>
+                                    class="next action-button" disabled>Continue</button>
                             </fieldset>
                             <fieldset <?php
                             if (isset($_COOKIE['chocol_cookie']) || $_GET['abandoned']) {
@@ -271,32 +271,32 @@ function chocoletras_shortCode()
                                 <div class="form-card">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="fs-title">Información De Envío</h2>
+                                            <h2 class="fs-title">Shipping Information</h2>
                                         </div>
                                         <div class="col-5">
                                             <h2 class="steps">
                                                 <b class="priceCounter"></b>
-                                                €
+                                                PKR
                                             </h2>
                                         </div>
                                     </div>
-                                    <input type="text" name="name" id="fname" placeholder="Nombre Completo" required />
-                                    <input type="email" name="email" id="email" placeholder="Email del comprador"
+                                    <input type="text" name="name" id="fname" placeholder="Full Name" required />
+                                    <input type="email" name="email" id="email" placeholder="Email"
                                         required />
                                     <div class="twiceField">
-                                        <input type="tel" name="tel" id="chocoTel" placeholder="Tel&#233;fono" minlength="9"
+                                        <input type="tel" name="tel" id="chocoTel" placeholder="Phone" minlength="9"
                                             required />
-                                        <input type="number" name="cp" id="cp" placeholder="C&#243;digo postal" required />
+                                        <input type="number" name="cp" id="cp" placeholder="Zip Code" required />
                                     </div>
                                     <div class="twiceField">
-                                        <input type="text" name="city" id="city" placeholder="Ciudad" />
-                                        <input type="text" name="province" id="province" placeholder="Provincia" />
+                                        <input type="text" name="city" id="city" placeholder="City" value="Karachi" disabled />
+                                        <input type="text" name="province" id="province" placeholder="Province" value="Sindh" disabled />
                                     </div>
-                                    <input type="text" name="address" id="address" placeholder="Direccion de entrega"
+                                    <input type="text" name="address" id="address" placeholder="Full Address"
                                         required />
                                     <div class="shippingPanel">
                                         <div class="normalShipping selected">
-                                            <p>Envío Normal</p>
+                                            <p>Normal Shipping</p>
                                             <svg fill="#000000" width="60px" height="60px" viewBox="0 0 32 32" version="1.1"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -305,7 +305,7 @@ function chocoletras_shortCode()
                                             </svg>
                                         </div>
                                         <div class="expressShipping">
-                                            <p>Envío Express</p>
+                                            <p>Express Shipping</p>
                                             <div class="expressBox">
                                                 <!-- <input type="checkbox" id="ExpressActivatorSwith"> -->
                                                 <svg fill="#000000" width="60px" height="60px" viewBox="0 -64 640 640"
@@ -316,17 +316,15 @@ function chocoletras_shortCode()
                                             </div>
                                         </div>
                                         <div class="standardShipping">
-                                            <h4>Fecha deseada de entrega.</h4>
-                                            <p>Todos nuestros envíos se realizan en días laborables e igualmente las
-                                                entregas se
-                                                hacen días laborables de 24h a 72h, envio ordinario.
+                                            <h4>Delivery Date</h4>
+                                            <p>Chocolettre will ship every order from 2 to 3 days.
                                             </p>
                                             <input type="date" name="date" id="picDate" placeholder="Fecha de entrega" />
                                         </div>
                                         <div class="shippingExpress" style="display: none;">
-                                            <p>Envío Express! ( 24h-48h! días laborables ) por
-                                                <?php echo _e('€' . get_option('expressShiping')) ?>
-                                                más
+                                            <p>Express Shipping will deliver your order in 1 - 2 Days. You have to paid
+                                                (<?php echo _e(get_option('expressShiping') . 'PKR') ?>)
+                                                more.
                                             </p>
                                         </div>
                                         <?php /*
@@ -350,22 +348,22 @@ function chocoletras_shortCode()
                                             placeholder="Unique Order ID">
                                     </div>
                                     <textarea name="message" id="message"
-                                        placeholder="Añadir tarjeta dedicatoria / observaciones"></textarea>
+                                        placeholder="Your comments on order processing."></textarea>
 
                                     <div class="couponSection">
-                                        <p>Haga clic para usar el cupón</p>
+                                        <p>Click here to apply coupons!</p>
                                         <div class="couponSectionInner">
                                             <input type="text" name="name" id="coupon"
-                                                placeholder="Ingresa tu código de cupón aquí" />
-                                            <button type="button" id="couponApply">Aplicar</button>
+                                                placeholder="Enter your coupon code here!" />
+                                            <button type="button" id="couponApply">Apply</button>
                                         </div>
                                     </div>
 
                                     <div class="termCondition">
                                         <input type="checkbox" name="term" id="TermAndCond" required>
                                         <label for="TermAndCond">
-                                            Para continuar acepte nuestros <a href="/terminos-y-condiciones/">
-                                                terminos y condiciones. </a>
+                                            To continue please read our <a href="/terminos-y-condiciones/">
+                                                Terms & Conditions. </a>
                                         </label>
                                     </div>
 
@@ -373,7 +371,7 @@ function chocoletras_shortCode()
                                         <!-- <input type="button" name="previous" class="previous action-button-previous" /> -->
                                         <div class="previous action-button-previous"></div>
                                         <!-- <input type="submit" name="next" class="next action-button" value="Next" /> -->
-                                        <input type="submit" name="next" class="action-button" value="Continuar" />
+                                        <input type="submit" name="next" class="action-button" value="Continue" />
                                     </div>
                                     <input type="hidden" id="precLetras" value="<?php echo get_option('precLetra'); ?>"
                                         readonly>
@@ -409,7 +407,7 @@ function chocoletras_shortCode()
                                 <div class="form-card">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="fs-title">Detalles Del Pedido</h2>
+                                            <h2 class="fs-title">Order Details</h2>
                                         </div>
                                         <div class="col-5">
                                             <h2 class="steps">
@@ -422,7 +420,7 @@ function chocoletras_shortCode()
                                                 } else{
                                                      echo $getOrderData['priceTotal'];
                                                  } ?></b>
-                                                €
+                                                PKR
                                             </h2>
                                         </div>
                                     </div>
@@ -445,7 +443,7 @@ function chocoletras_shortCode()
                                                     <img src="<?php echo get_site_url() . $screenshotUrl[$scCounter]; ?>" alt="<?php echo $frase; ?>">
                                                 </div>
                                                 <div class="orderData">
-                                                    <p>Frase: <?php echo $frase; ?></p>
+                                                    <p>Phrase: <?php echo $frase; ?></p>
                                                     <div class="pinsPanel">
                                                         <div class="deliveryDate">
                                                             <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none"
@@ -469,7 +467,7 @@ function chocoletras_shortCode()
                                                                     <path
                                                                         d="M 0 6 L 0 8 L 19 8 L 19 23 L 12.84375 23 C 12.398438 21.28125 10.851563 20 9 20 C 7.148438 20 5.601563 21.28125 5.15625 23 L 4 23 L 4 18 L 2 18 L 2 25 L 5.15625 25 C 5.601563 26.71875 7.148438 28 9 28 C 10.851563 28 12.398438 26.71875 12.84375 25 L 21.15625 25 C 21.601563 26.71875 23.148438 28 25 28 C 26.851563 28 28.398438 26.71875 28.84375 25 L 32 25 L 32 16.84375 L 31.9375 16.6875 L 29.9375 10.6875 L 29.71875 10 L 21 10 L 21 6 Z M 1 10 L 1 12 L 10 12 L 10 10 Z M 21 12 L 28.28125 12 L 30 17.125 L 30 23 L 28.84375 23 C 28.398438 21.28125 26.851563 20 25 20 C 23.148438 20 21.601563 21.28125 21.15625 23 L 21 23 Z M 2 14 L 2 16 L 8 16 L 8 14 Z M 9 22 C 10.117188 22 11 22.882813 11 24 C 11 25.117188 10.117188 26 9 26 C 7.882813 26 7 25.117188 7 24 C 7 22.882813 7.882813 22 9 22 Z M 25 22 C 26.117188 22 27 22.882813 27 24 C 27 25.117188 26.117188 26 25 26 C 23.882813 26 23 25.117188 23 24 C 23 22.882813 23.882813 22 25 22 Z" />
                                                                 </svg>
-                                                                Envío Express
+                                                                Express Shipping
                                                             <?php } else { ?>
                                                                 <svg fill="#fff" width="16px" height="16px" viewBox="0 0 32 32"
                                                                     version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -477,7 +475,7 @@ function chocoletras_shortCode()
                                                                         d="M16.722 21.863c-0.456-0.432-0.988-0.764-1.569-0.971l-1.218-4.743 14.506-4.058 1.554 6.056-13.273 3.716zM12.104 9.019l9.671-2.705 1.555 6.058-9.67 2.705-1.556-6.058zM12.538 20.801c-0.27 0.076-0.521 0.184-0.765 0.303l-4.264-16.615h-1.604c-0.161 0.351-0.498 0.598-0.896 0.598h-2.002c-0.553 0-1.001-0.469-1.001-1.046s0.448-1.045 1.001-1.045h2.002c0.336 0 0.618 0.184 0.8 0.447h3.080v0.051l0.046-0.014 4.41 17.183c-0.269 0.025-0.538 0.064-0.807 0.138zM12.797 21.811c1.869-0.523 3.79 0.635 4.291 2.588 0.501 1.951-0.608 3.957-2.478 4.48-1.869 0.521-3.79-0.637-4.291-2.588s0.609-3.957 2.478-4.48zM12.27 25.814c0.214 0.836 1.038 1.332 1.839 1.107s1.276-1.084 1.062-1.92c-0.214-0.836-1.038-1.332-1.839-1.109-0.802 0.225-1.277 1.085-1.062 1.922zM29.87 21.701l-11.684 3.268c-0.021-0.279-0.060-0.561-0.132-0.842-0.071-0.281-0.174-0.545-0.289-0.799l11.623-3.25 0.482 1.623z">
                                                                     </path>
                                                                 </svg>
-                                                                Envío Normal
+                                                             Normal Shipping
                                                             <?php } ?>
                                                         </div>
                                                     </div>
@@ -500,7 +498,7 @@ function chocoletras_shortCode()
                                                     <img src="<?php echo get_site_url() . $screenshotUrl; ?>" alt="">
                                                 </div>
                                                 <div class="orderData">
-                                                    <p>Frase: <?php echo $frase; ?></p>
+                                                    <p>Phrase: <?php echo $frase; ?></p>
                                                     <div class="pinsPanel">
                                                         <div class="deliveryDate">
                                                             <svg width="16px" height="16px" viewBox="0 0 24 24" fill="none"
@@ -524,7 +522,7 @@ function chocoletras_shortCode()
                                                                     <path
                                                                         d="M 0 6 L 0 8 L 19 8 L 19 23 L 12.84375 23 C 12.398438 21.28125 10.851563 20 9 20 C 7.148438 20 5.601563 21.28125 5.15625 23 L 4 23 L 4 18 L 2 18 L 2 25 L 5.15625 25 C 5.601563 26.71875 7.148438 28 9 28 C 10.851563 28 12.398438 26.71875 12.84375 25 L 21.15625 25 C 21.601563 26.71875 23.148438 28 25 28 C 26.851563 28 28.398438 26.71875 28.84375 25 L 32 25 L 32 16.84375 L 31.9375 16.6875 L 29.9375 10.6875 L 29.71875 10 L 21 10 L 21 6 Z M 1 10 L 1 12 L 10 12 L 10 10 Z M 21 12 L 28.28125 12 L 30 17.125 L 30 23 L 28.84375 23 C 28.398438 21.28125 26.851563 20 25 20 C 23.148438 20 21.601563 21.28125 21.15625 23 L 21 23 Z M 2 14 L 2 16 L 8 16 L 8 14 Z M 9 22 C 10.117188 22 11 22.882813 11 24 C 11 25.117188 10.117188 26 9 26 C 7.882813 26 7 25.117188 7 24 C 7 22.882813 7.882813 22 9 22 Z M 25 22 C 26.117188 22 27 22.882813 27 24 C 27 25.117188 26.117188 26 25 26 C 23.882813 26 23 25.117188 23 24 C 23 22.882813 23.882813 22 25 22 Z" />
                                                                 </svg>
-                                                                Envío Express
+                                                                Express Shipping
                                                             <?php } else { ?>
                                                                 <svg fill="#fff" width="16px" height="16px" viewBox="0 0 32 32"
                                                                     version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -532,7 +530,7 @@ function chocoletras_shortCode()
                                                                         d="M16.722 21.863c-0.456-0.432-0.988-0.764-1.569-0.971l-1.218-4.743 14.506-4.058 1.554 6.056-13.273 3.716zM12.104 9.019l9.671-2.705 1.555 6.058-9.67 2.705-1.556-6.058zM12.538 20.801c-0.27 0.076-0.521 0.184-0.765 0.303l-4.264-16.615h-1.604c-0.161 0.351-0.498 0.598-0.896 0.598h-2.002c-0.553 0-1.001-0.469-1.001-1.046s0.448-1.045 1.001-1.045h2.002c0.336 0 0.618 0.184 0.8 0.447h3.080v0.051l0.046-0.014 4.41 17.183c-0.269 0.025-0.538 0.064-0.807 0.138zM12.797 21.811c1.869-0.523 3.79 0.635 4.291 2.588 0.501 1.951-0.608 3.957-2.478 4.48-1.869 0.521-3.79-0.637-4.291-2.588s0.609-3.957 2.478-4.48zM12.27 25.814c0.214 0.836 1.038 1.332 1.839 1.107s1.276-1.084 1.062-1.92c-0.214-0.836-1.038-1.332-1.839-1.109-0.802 0.225-1.277 1.085-1.062 1.922zM29.87 21.701l-11.684 3.268c-0.021-0.279-0.060-0.561-0.132-0.842-0.071-0.281-0.174-0.545-0.289-0.799l11.623-3.25 0.482 1.623z">
                                                                     </path>
                                                                 </svg>
-                                                                Envío Normal
+                                                                Normal Shipping
                                                             <?php } ?>
                                                         </div>
                                                     </div>
@@ -543,7 +541,7 @@ function chocoletras_shortCode()
                                     </div>
                                 <?php } ?>
                                     <div class="lineBreaker">
-                                        <span>Aceptamos Pagos</span>
+                                        <span>We accept payments</span>
                                     </div>
 
                                     <div class="paymentPanel">
@@ -673,7 +671,7 @@ function chocoletras_shortCode()
                                         </svg>
                                     </div>
                                     <input id="proceedPayment" type="button" name="next" class="action-button"
-                                        value="Pagar Ahora" />
+                                        value="Pay Now" />
                                 </div>
                             </fieldset>
                             <fieldset <?php
@@ -682,23 +680,23 @@ function chocoletras_shortCode()
                             }
                             ?>>
                                 <div class="thankYouCard">
-                                    <h3>¡Gracias por su compra!</h3>
+                                    <h3>Thank you for your purchase!</h3>
                                     <div style="font-size:10vw;">🙂</div>
                                     <p>
-                                        Gracias por comprar en Chocoletra, suscríbase a nuestro boletín y manténgase
-                                        actualizado con nuestros <br> descuentos y ofertas.
+                                    Thank you for shopping at Chocolettre, subscribe to our newsletter and stay
+                                    Updated with our <br> discounts and offers.
                                     </p>
                                     <div class="termCondition">
                                         <input type="checkbox" name="newsCLP" id="newsletterCLP">
                                         <label for="newsletterCLP">
-                                            Suscríbete a nuestro boletín.
+                                        Subscribe to our newsletter.
                                         </label>
                                     </div>
 
-                                    <a class="newOrder" href="<?php echo get_option('ctf_settings')['plugin_page'];?>">Iniciar nuevo pedido</a>
+                                    <a class="newOrder" href="<?php echo get_option('ctf_settings')['plugin_page'];?>">Start new order</a>
                                     <a class="visitHome" href="<?php echo site_url();?>">Visitar Inicio</a>
 
-                                    <span>Redirigir a la página de la tienda <i id="countdownRedirect">40</i>s</span>
+                                    <span>Redirect to shop page <i id="countdownRedirect">40</i>s</span>
                                 </div>
                             </fieldset>
                         </form>

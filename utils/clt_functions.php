@@ -128,7 +128,7 @@ function chocoletrasInsertScripts()
   // wp_enqueue_script('chocoletrasScript', plugins_url('../src/main.js', __FILE__), array(), '1.0.0', true);
   wp_enqueue_style('pluginStylesClt', plugins_url('../src/css/clt_style.css', __FILE__), array(), false);
 
-  if (is_page('crea-tu-frase')) {
+  if (is_page('sample-page')) {
     wp_enqueue_style('bootstrapForPlugin', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css', array(), false);
   }
 
@@ -136,6 +136,7 @@ function chocoletrasInsertScripts()
 
   wp_enqueue_style('styleForFrontend', plugins_url('../src/css/frontend-style.css', __FILE__), array(), false);
 
+  wp_enqueue_script('frontendjQueryLibrary', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), '1.0.0', true);
   wp_enqueue_script('flatpcikrScriptForFrontend', 'https://cdn.jsdelivr.net/npm/flatpickr', array(), '1.0.0', true);
   wp_enqueue_script('flatpcikrScriptForLanguage', 'https://npmcdn.com/flatpickr@4.6.13/dist/l10n/es.js', array(), '1.0.0', true);
   wp_enqueue_script('screencaptureOrder', 'https://cdn.jsdelivr.net/npm/html2canvas@1.3.2/dist/html2canvas.min.js', array(), '1.0.0', true);
@@ -283,7 +284,7 @@ add_action('wp_ajax_reportForm', 'saveReportData');
 //=============================================================//
 define('PROCESS_FRASE', plugins_url('clt_process_form.php', __FILE__));
 
-add_shortcode('chocoletra', 'chocoletras_shortCode');
+add_shortcode('chocolettre', 'chocoletras_shortCode');
 
 // chocoletras admin menu
 add_action('admin_menu', 'clt_adminMenu');

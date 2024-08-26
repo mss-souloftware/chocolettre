@@ -5,7 +5,7 @@
  * plugin URI: https://souloftware.com/
  * version:1.0.0
  * Text Domail: lic. M. Sufyan Shaikh 
- * Description: plugin for get control of chocoletra. For activate add this shorcode [chocoletra]
+ * Description: plugin for get control of chocolettre. For activate add this shorcode [chocolettre]
  * Author: Syntechtia
  * Author URI: https://souloftware.com/
 */

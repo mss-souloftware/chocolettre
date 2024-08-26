@@ -161,7 +161,7 @@ function chocoletras_shortCode()
                                             <pre><?php echo _e('Prec. por letras:  ') ?></pre>
                                         </td>
                                         <td><b>
-                                                <pre><?php echo get_option('precLetra'); ?>€</pre>
+                                                <pre><?php echo get_option('precLetra'); ?>PKR</pre>
                                             </b></td>
                                     </tr>
                                     <tr>
@@ -169,7 +169,7 @@ function chocoletras_shortCode()
                                             <pre><?php echo _e('Prec. por 🖤:  ') ?></pre>
                                         </td>
                                         <td><b>
-                                                <pre>   €</pre>
+                                                <pre>   PKR</pre>
                                             </b></td>
                                     </tr>
                                     <tr>
@@ -177,7 +177,7 @@ function chocoletras_shortCode()
                                             <pre><?php echo _e('Gastos de envio:  ') ?></pre>
                                         </td>
                                         <td><b>
-                                                <pre><?php echo get_option('precEnvio'); ?>€</pre>
+                                                <pre><?php echo get_option('precEnvio'); ?>PKR</pre>
                                             </b></td>
                                     </tr>
                                     <tr>
@@ -201,7 +201,7 @@ function chocoletras_shortCode()
                                             <pre><?php echo _e('Gasto Minimo: ') ?></pre>
                                         </td>
                                         <td><b>
-                                                <pre><?php echo get_option('gastoMinimo'); ?>€</pre>
+                                                <pre><?php echo get_option('gastoMinimo'); ?>PKR</pre>
                                             </b></td>
                                     </tr>
                                 </tbody>
@@ -215,7 +215,7 @@ function chocoletras_shortCode()
                                 <?php echo _e('Total: ') ?>
                                 <b id="<?php echo _e('counter') ?>">
                                     <?php echo get_option('gastoMinimo') + get_option('precEnvio'); ?>
-                                </b>€
+                                </b>PKR
                             </span>
                         </li>
                         <li>
@@ -263,7 +263,7 @@ function chocoletras_shortCode()
                             <label for="ExpressActivatorSwith">
                                 <?php echo _e('Env&#237;o Express! ( 24h-48h! d&#237;as laborables ) por ') ?>
                                 <b>
-                                    <?php echo _e('€' . get_option('expressShiping')) ?>
+                                    <?php echo _e('PKR' . get_option('expressShiping')) ?>
                                 </b>
                             </label>
                         </div>
@@ -342,7 +342,7 @@ function chocoletras_shortCode()
                 </p>
                 <span>
                     <?php echo _e('Saldo a pagar:  '); ?> <b>
-                        <?php echo get_option($_COOKIE['chocol_cookie']) ? explode('_', get_option($_COOKIE['chocol_cookie']))[0] . '€' : 'null'; ?>
+                        <?php echo get_option($_COOKIE['chocol_cookie']) ? explode('_', get_option($_COOKIE['chocol_cookie']))[0] . 'PKR' : 'null'; ?>
                     </b>
                 </span>
                 <div class="chocoletrasPlg__wrapperCode-payment-card">

@@ -129,9 +129,9 @@
             // Add shipping cost to the total price
             totalPrice += shippingCost;
 
-            jQuery('#ctf_form #counter').text(totalPrice.toFixed(2));
+            jQuery('#ctf_form #counter').text(totalPrice.toFixed(0));
             jQuery('#actual').text(totalCount);
-            jQuery('.chocoletrasPlg__wrapperCode-dataUser-form-input-price').val(totalPrice.toFixed(2));
+            jQuery('.chocoletrasPlg__wrapperCode-dataUser-form-input-price').val(totalPrice.toFixed(0));
         }
 
 
@@ -327,7 +327,7 @@
             $('.fraseInput').each(function () {
                 mainText.push($(this).val());
             });
-            
+
             const dataToSend = {
                 action: 'test_action',
                 mainText: JSON.stringify(mainText),
@@ -779,8 +779,8 @@
                             let priceTotal = $('.chocoletrasPlg__wrapperCode-dataUser-form-input-price').val();
                             let discountValue = (Number(priceTotal) * response.data.discount) / 100;
                             let afterDiscount = Number(priceTotal) - discountValue;
-                            $('.priceCounter').text(afterDiscount.toFixed(2));
-                            $('.chocoletrasPlg__wrapperCode-dataUser-form-input-price').val(afterDiscount.toFixed(2));
+                            $('.priceCounter').text(afterDiscount.toFixed(0));
+                            $('.chocoletrasPlg__wrapperCode-dataUser-form-input-price').val(afterDiscount.toFixed(0));
                         } else {
                             console.log('Unknown discount type');
                         }
@@ -826,7 +826,7 @@
     const typedText = document.querySelector(".typed-text");
     const cursor = document.querySelector(".cursor");
 
-    const textArray = ["Tu Frase", "Tus Deseos", "Tus Saludos"];
+    const textArray = ["Phrase", "Gifts", "Message", "Wish"];
 
     let textArrayIndex = 0;
     let charIndex = 0;
